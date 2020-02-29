@@ -41,9 +41,10 @@ spec:
           initialDelaySeconds: 15
           timeoutSeconds: 1
           periodSeconds: 10
-       resources:
-         requests:
+        resources:
+          requests:
             cpu: 200m
+
 ---
 
 apiVersion: autoscaling/v2beta1
@@ -63,4 +64,3 @@ spec:
     resource:
       name: cpu
       targetAverageUtilization: 50
-
